@@ -16,7 +16,7 @@ public class DenominationCalculatorService {
 
     public CalculationResult calculateDenominations(ComputeData data) {
 
-        if (data.getCurrentAmount() <= 0 || data.getPreviousAmount() <= 0) {
+        if (data.getCurrentAmount() < 0 || data.getPreviousAmount() < 0) {
             throw new IllegalArgumentException("Amounts must be positive.");
         }
 
